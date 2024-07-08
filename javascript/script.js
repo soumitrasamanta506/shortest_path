@@ -87,6 +87,7 @@ document.querySelector("#addCityBtn").addEventListener("click", function(){
     if(isExist_city(cityName) == true)
     {
         window.alert('City already exist!')
+        noOfCity--
         return;
     }
     // location on graph
