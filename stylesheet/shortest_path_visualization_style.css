@@ -108,6 +108,8 @@ canvas {
         display: grid;
         grid-template-areas: "addCity addRoad"
                              "getShortestPath addRoad";
+        grid-template-columns: 50% 50%;
+        gap: 2px;
     }
     .addCity{
         grid-area: addCity;
