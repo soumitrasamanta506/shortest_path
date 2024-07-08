@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shortest_path</title>
+    <link rel="stylesheet" href="../stylesheet/shortest_path_visualization_style.css">
+</head>
+<body>
+    <div class="product flex-product">
+        <div class="feature-section">
+            <h2>Feature</h2>
+            <div class="features">
+                <div class="addCity flex-feature">
+                    <input type="text" placeholder="City name" id="cityNameInput">
+                    <button id="addCityBtn">+Add city</button>
+                </div>
+                <div class="addRoad flex-feature">
+                    <input type="text" placeholder="City 1" id="city1Input">
+                    <input type="text" placeholder="City 2" id="city2Input">
+                    <input type="text" placeholder="Distance" id="distanceInput">
+                    <button id="addRoadBtn">+Add road</button>
+                </div>
+                <div class="getShortestPath flex-feature">
+                    <input type="text" placeholder="Source" id="sourceInput">
+                    <input type="text" placeholder="Destination" id="destinationInput">
+                    <button id="shortestPathBtn">shortest path</button>
+                </div>
+            </div>
+        </div>
+        <canvas id="myCanvas"></canvas>
+    </div>
+</body>
+<script src="../javascript/script.js"></script>
+</html>

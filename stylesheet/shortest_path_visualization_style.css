@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+input{
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+button{
+    padding: 5px;
+    width: fit-content;
+    border-radius: 10px;
+    align-self: center;
+    background-color: #00BF63;
+}
+.getShortestPath button{
+    background-color: #5E17EB;
+    color: #00BF63;
+}
+/* product */
+.product{
+    height: 100%;
+    width: 100%;
+}
+.flex-product{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* feature css */
+.feature-section{
+    padding: 10px;
+    width: 15%;
+    height: 100%;
+    border: medium dotted ;
+    border-radius: 25px;
+    
+}
+.feature-section h2{
+    height: 10%;
+    text-align: center;
+    color: rgb(44, 44, 209);
+}
+.features{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-feature{
+    padding: 5px;
+    width: min(140px, 100%);
+    display: flex;   
+    flex-direction: column; 
+    gap: 10px;
+    justify-content: space-around;
+    align-content: center;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+/* graph/visual css */
+canvas {
+    width: 75%;
+    height: 100%;
+    border: 2px solid;
+}
+
+/* responsive css */
+@media only screen and (width < 850px){
+    .flex-product{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .feature-section{
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .feature-section h2{
+        height: fit-content;
+    }
+    .features{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    canvas{
+        width: 100%;
+    }
+}
+
+@media only screen and (width < 485px){
+    .features{
+        display: grid;
+        grid-template-areas: "addCity addRoad"
+                             "getShortestPath addRoad";
+    }
+    .addCity{
+        grid-area: addCity;
+    }
+    .addRoad{
+        grid-area: addRoad;
+        align-self: stretch;
+    }
+    .getShortestPath{
+        grid-area: getShortestPath;
+    }
+}
