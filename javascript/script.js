@@ -315,20 +315,22 @@ function search_shortestPath(sourceCityName, destinationCityName)
         let currentCity = queue.front()
         queue.dequeue()
 
-        graph[currentCity].forEach(function(road){
-            if(distanceArray[road[0]] === -1)
-            {
-                distanceArray[road[0]] = distanceArray[currentCity] + road[1]
-                parentArray[road[0]] = currentCity
-                queue.enqueue(road[0])
-            }
-            else if(distanceArray[currentCity]+road[1] < distanceArray[road[0]])
-            {
-                distanceArray[road[0]] = distanceArray[currentCity]+road[1]
-                parentArray[road[0]] = currentCity
-                queue.enqueue(road[0])
-            }
-        })
+        if(graph[currentCity] != undefined){
+            graph[currentCity].forEach(function(road){
+                if(distanceArray[road[0]] === -1)
+                {
+                    distanceArray[road[0]] = distanceArray[currentCity] + road[1]
+                    parentArray[road[0]] = currentCity
+                    queue.enqueue(road[0])
+                }
+                else if(distanceArray[currentCity]+road[1] < distanceArray[road[0]])
+                {
+                    distanceArray[road[0]] = distanceArray[currentCity]+road[1]
+                    parentArray[road[0]] = currentCity
+                    queue.enqueue(road[0])
+                }
+            })
+        }
     }
     highlightShortestPath(indexOfSource, indexOfDestination, parentArray)
 }
